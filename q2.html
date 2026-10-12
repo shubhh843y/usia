@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2: Ludhiana NTL Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: 20px auto; padding: 20px; color: #333; }
+        h1, h2 { color: #2c3e50; }
+        .card { background: #fff; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        img { max-width: 100%; height: auto; display: block; margin: 10px auto; border-radius: 4px; border: 1px solid #ddd; }
+        .image-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .back-btn { display: inline-block; background: #6c757d; color: white; padding: 8px 15px; text-decoration: none; border-radius: 4px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <a class="btn back-btn" href="index.html">← Back to Portfolio Home</a>
+
+    <h1>Question 2: Ludhiana Night-time Radiance Trends (2014–2024)</h1>
+    <p><strong>Dataset:</strong> VIIRS Night-time Lights (NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG) | <strong>Boundary:</strong> OpenStreetMap (osmnx)</p>
+
+    <div class="card">
+        <h2>1. Dynamic Temporal Animation</h2>
+        <img src="ludhiana_ntl_years.gif" alt="Ludhiana NTL GIF">
+    </div>
+
+    <div class="card">
+        <h2>2. Long-Term Trend & Graph</h2>
+        <img src="mean_radiance_graph.png" alt="Trend Graph">
+        <p><strong>Key Statistics:</strong> Linear trend slope of +0.17 nW/cm²/sr per year (R² = 0.84); overall change from 2014 to 2024 = +73.7%.</p>
+    </div>
+
+    <div class="card">
+        <h2>3. Spatial Maps & Change Analysis</h2>
+        <div class="image-grid">
+            <div><p align="center"><b>2014 Baseline</b></p><img src="radiance_2014.png"></div>
+            <div><p align="center"><b>2024 Final</b></p><img src="radiance_2024.png"></div>
+        </div>
+        <p align="center"><b>Net Change Map (2024 minus 2014)</b></p>
+        <img src="change_map.png">
+        <p><strong>Metrics:</strong> Mean pixel increase of 1.62 nW/cm²/sr. 85.9% of city pixels brightened by >0.5, while 0.9% dimmed.</p>
+    </div>
+
+    <div class="card">
+        <h2>4. Discussion & Limitations</h2>
+        <p><strong>Spatial Pattern:</strong> High radiance clusters tightly in commercial and industrial core zones, showing outward spillover into peripheral fringes.</p>
+        <p><strong>Temporal Change:</strong> A 73.7% surge highlights robust regional development and infrastructure rollout.</p>
+        <p><strong>Limitations:</strong> Coarse spatial resolution (~464 m) creates a lighting "blooming" effect into adjacent dark pixels. Radiance tracks economic activity rather than precise population or income directly.</p>
+    </div>
+</body>
+</html>

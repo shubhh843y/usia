@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d8c7c02995bc41524648d76a68499c40 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d8c7c02995bc41524648d76a68499c40" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d8c7c02995bc41524648d76a68499c40 = L.map(
+                "map_d8c7c02995bc41524648d76a68499c40",
+                {
+                    center: [13.711113524458064, 79.59179492750235],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_d8c7c02995bc41524648d76a68499c40);
+
+            
+
+        
+    
+            var tile_layer_ac1c831d8692ea8b2a91527cae277200 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ac1c831d8692ea8b2a91527cae277200.addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            var tile_layer_83d60f8b261fa5c0c7c5e362a8c5bac9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_83d60f8b261fa5c0c7c5e362a8c5bac9.addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            var tile_layer_c85ee6ead980393f483ed261f8034eb8 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "Esri World Imagery",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c85ee6ead980393f483ed261f8034eb8.addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            var feature_group_9ae7db3d155702daef5a06bc4df63ea1 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_04e5ebca4081438e7173e0e5b5b6ecfb = L.markerClusterGroup(
+                {
+  "disableClusteringAtZoom": 18,
+}
+            );
+        
+    
+            var marker_10fb2256a13c0d839b7f606543c845e5 = L.marker(
+                [13.714526960426394, 79.5943186700841],
+                {
+}
+            ).addTo(marker_cluster_04e5ebca4081438e7173e0e5b5b6ecfb);
+        
+    
+            var icon_6c4014b13af0de9f548796d7d7c0b8ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6a1a897004a5d3a44ba978ead072fbd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4f344545a90ea8317d0ff426edc72a8b = $(`<div id="html_4f344545a90ea8317d0ff426edc72a8b" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Opposite admin building</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 01 Sep 2026, 19:29 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260901135938688.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_b6a1a897004a5d3a44ba978ead072fbd.setContent(html_4f344545a90ea8317d0ff426edc72a8b);
+            
+        
+
+        marker_10fb2256a13c0d839b7f606543c845e5.bindPopup(popup_b6a1a897004a5d3a44ba978ead072fbd)
+        ;
+
+        
+    
+    
+            marker_10fb2256a13c0d839b7f606543c845e5.bindTooltip(
+                `<div>
+                     Opposite admin building | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10fb2256a13c0d839b7f606543c845e5.setIcon(icon_6c4014b13af0de9f548796d7d7c0b8ec);
+            
+    
+            var marker_1f52c0b607370eb9d149a350b85c9e93 = L.marker(
+                [13.715696210063944, 79.59177190000067],
+                {
+}
+            ).addTo(marker_cluster_04e5ebca4081438e7173e0e5b5b6ecfb);
+        
+    
+            var icon_416a93babc5551e42f342a871130a6d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e0cb0878d1eb56d629bd78f033d75cb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a1f5beb97ab235c29a78cdd58ecc1863 = $(`<div id="html_a1f5beb97ab235c29a78cdd58ecc1863" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Opposite AB1</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 01 Sep 2026, 19:37 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260901140732920.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_3e0cb0878d1eb56d629bd78f033d75cb.setContent(html_a1f5beb97ab235c29a78cdd58ecc1863);
+            
+        
+
+        marker_1f52c0b607370eb9d149a350b85c9e93.bindPopup(popup_3e0cb0878d1eb56d629bd78f033d75cb)
+        ;
+
+        
+    
+    
+            marker_1f52c0b607370eb9d149a350b85c9e93.bindTooltip(
+                `<div>
+                     Opposite AB1 | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f52c0b607370eb9d149a350b85c9e93.setIcon(icon_416a93babc5551e42f342a871130a6d1);
+            
+    
+            marker_cluster_04e5ebca4081438e7173e0e5b5b6ecfb.addTo(feature_group_9ae7db3d155702daef5a06bc4df63ea1);
+        
+    
+            feature_group_9ae7db3d155702daef5a06bc4df63ea1.addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            var feature_group_ed1af6a4e595db6873e89d5f060d01d8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_75afdf52980952ccb6835a985c0789b5 = L.markerClusterGroup(
+                {
+  "disableClusteringAtZoom": 18,
+}
+            );
+        
+    
+            var marker_719530751cdaa7c9c0a25926c1ff9789 = L.marker(
+                [13.717013400000003, 79.58704116999998],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_a9a586c6512a8fe6881a8a74cb242c58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e892efaaf8b6e357ccc1b8057daac717 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d805c28a06808554108fd930c924ffad = $(`<div id="html_d805c28a06808554108fd930c924ffad" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Outside north mess</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:26 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902145707031.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_e892efaaf8b6e357ccc1b8057daac717.setContent(html_d805c28a06808554108fd930c924ffad);
+            
+        
+
+        marker_719530751cdaa7c9c0a25926c1ff9789.bindPopup(popup_e892efaaf8b6e357ccc1b8057daac717)
+        ;
+
+        
+    
+    
+            marker_719530751cdaa7c9c0a25926c1ff9789.bindTooltip(
+                `<div>
+                     Outside north mess | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_719530751cdaa7c9c0a25926c1ff9789.setIcon(icon_a9a586c6512a8fe6881a8a74cb242c58);
+            
+    
+            var marker_6c9c1e339280a4a0f3fa9b8dcbad4bb6 = L.marker(
+                [13.717334999999999, 79.58648293],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_94fc22feab798062d255edb0d1319db1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67e5d5192d2a90471557cb0b7218988b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6287ed5ae12ff2cd3023be84b9ae829b = $(`<div id="html_6287ed5ae12ff2cd3023be84b9ae829b" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Behind DES hostel</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:28 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902145944433.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_67e5d5192d2a90471557cb0b7218988b.setContent(html_6287ed5ae12ff2cd3023be84b9ae829b);
+            
+        
+
+        marker_6c9c1e339280a4a0f3fa9b8dcbad4bb6.bindPopup(popup_67e5d5192d2a90471557cb0b7218988b)
+        ;
+
+        
+    
+    
+            marker_6c9c1e339280a4a0f3fa9b8dcbad4bb6.bindTooltip(
+                `<div>
+                     Behind DES hostel | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c9c1e339280a4a0f3fa9b8dcbad4bb6.setIcon(icon_94fc22feab798062d255edb0d1319db1);
+            
+    
+            var marker_b6224b3676b377882e3f620c39b898a0 = L.marker(
+                [13.717604599999998, 79.58693941],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_7cc0f5558c4534744912a8aaba8f99e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01d6128739cbebd4b50b044284e6a63b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4f9ae878044802f33a9af3f2c52d6655 = $(`<div id="html_4f9ae878044802f33a9af3f2c52d6655" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">DES Hostel front</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:31 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902150154104.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_01d6128739cbebd4b50b044284e6a63b.setContent(html_4f9ae878044802f33a9af3f2c52d6655);
+            
+        
+
+        marker_b6224b3676b377882e3f620c39b898a0.bindPopup(popup_01d6128739cbebd4b50b044284e6a63b)
+        ;
+
+        
+    
+    
+            marker_b6224b3676b377882e3f620c39b898a0.bindTooltip(
+                `<div>
+                     DES Hostel front | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b6224b3676b377882e3f620c39b898a0.setIcon(icon_7cc0f5558c4534744912a8aaba8f99e1);
+            
+    
+            var marker_03c677648717b4c59ce9442dbb739627 = L.marker(
+                [13.71799433, 79.58716412],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_f0ef00e90f7f77df2072bb62e1bea60c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68668e31844ff197036a24d7bfc21128 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6d30ceb0cf25173294a04d253e3ef2c3 = $(`<div id="html_6d30ceb0cf25173294a04d253e3ef2c3" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Malhar Hostel Front</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:33 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902150315821.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_68668e31844ff197036a24d7bfc21128.setContent(html_6d30ceb0cf25173294a04d253e3ef2c3);
+            
+        
+
+        marker_03c677648717b4c59ce9442dbb739627.bindPopup(popup_68668e31844ff197036a24d7bfc21128)
+        ;
+
+        
+    
+    
+            marker_03c677648717b4c59ce9442dbb739627.bindTooltip(
+                `<div>
+                     Malhar Hostel Front | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_03c677648717b4c59ce9442dbb739627.setIcon(icon_f0ef00e90f7f77df2072bb62e1bea60c);
+            
+    
+            var marker_7011a040b524fca97121adf436d2b35c = L.marker(
+                [13.71775014, 79.58745039],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_3abf269e50d33d4e795a87a0a2a6c08a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e589b11ef164449c498ab7edaa8a64b0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_74a5210b939fccade7f88af312d185bd = $(`<div id="html_74a5210b939fccade7f88af312d185bd" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Malhar hostel gate</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:34 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902150452154.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_e589b11ef164449c498ab7edaa8a64b0.setContent(html_74a5210b939fccade7f88af312d185bd);
+            
+        
+
+        marker_7011a040b524fca97121adf436d2b35c.bindPopup(popup_e589b11ef164449c498ab7edaa8a64b0)
+        ;
+
+        
+    
+    
+            marker_7011a040b524fca97121adf436d2b35c.bindTooltip(
+                `<div>
+                     Malhar hostel gate | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7011a040b524fca97121adf436d2b35c.setIcon(icon_3abf269e50d33d4e795a87a0a2a6c08a);
+            
+    
+            var marker_668d724655f5ee214dd8a808397b0b7f = L.marker(
+                [13.71656694, 79.58851290999999],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_f16fbca9b072ee7b66c082a58ffff089 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6914ee1ed30acfb52df7dcb37f0ebd7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_817d59d55d7a0f46aadc93b44ce29fb9 = $(`<div id="html_817d59d55d7a0f46aadc93b44ce29fb9" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Near malhar hostel</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:46 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902151623058.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_d6914ee1ed30acfb52df7dcb37f0ebd7.setContent(html_817d59d55d7a0f46aadc93b44ce29fb9);
+            
+        
+
+        marker_668d724655f5ee214dd8a808397b0b7f.bindPopup(popup_d6914ee1ed30acfb52df7dcb37f0ebd7)
+        ;
+
+        
+    
+    
+            marker_668d724655f5ee214dd8a808397b0b7f.bindTooltip(
+                `<div>
+                     Near malhar hostel | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_668d724655f5ee214dd8a808397b0b7f.setIcon(icon_f16fbca9b072ee7b66c082a58ffff089);
+            
+    
+            var marker_aa0f0001d2c3ea8306b3a524add9362c = L.marker(
+                [13.715611670000001, 79.58858182],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_1a2473b3f185d20ecfeacd9e59cb66f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ab3d531fc86075d7d192f9c64e0b6a2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_49d133f9b68f36e271db58c303260547 = $(`<div id="html_49d133f9b68f36e271db58c303260547" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:49 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902151951496.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_8ab3d531fc86075d7d192f9c64e0b6a2.setContent(html_49d133f9b68f36e271db58c303260547);
+            
+        
+
+        marker_aa0f0001d2c3ea8306b3a524add9362c.bindPopup(popup_8ab3d531fc86075d7d192f9c64e0b6a2)
+        ;
+
+        
+    
+    
+            marker_aa0f0001d2c3ea8306b3a524add9362c.bindTooltip(
+                `<div>
+                     Road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa0f0001d2c3ea8306b3a524add9362c.setIcon(icon_1a2473b3f185d20ecfeacd9e59cb66f4);
+            
+    
+            var marker_4bf433e7d96663a84116f41c1867b1b4 = L.marker(
+                [13.715016870000001, 79.58924036999998],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_335ef0e3d9cb8d72f919e5a2dc3657a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f0dd7d057c3b61504e0c1c92d734d56 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8ba3e7954ab7a26cf676d6e1edc431fb = $(`<div id="html_8ba3e7954ab7a26cf676d6e1edc431fb" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Road AB1 cut</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:51 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902152207625.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_8f0dd7d057c3b61504e0c1c92d734d56.setContent(html_8ba3e7954ab7a26cf676d6e1edc431fb);
+            
+        
+
+        marker_4bf433e7d96663a84116f41c1867b1b4.bindPopup(popup_8f0dd7d057c3b61504e0c1c92d734d56)
+        ;
+
+        
+    
+    
+            marker_4bf433e7d96663a84116f41c1867b1b4.bindTooltip(
+                `<div>
+                     Road AB1 cut | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4bf433e7d96663a84116f41c1867b1b4.setIcon(icon_335ef0e3d9cb8d72f919e5a2dc3657a4);
+            
+    
+            var marker_4c941d226b73a997cfd4356595defe3f = L.marker(
+                [13.714567569999996, 79.58959247],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_52c2ab35b955aa24e3c87f3ffc8cf8bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f51a0eea8e766187cc80e7d302d040ee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_68fc79025c7cf6d3fa459ca939db8fef = $(`<div id="html_68fc79025c7cf6d3fa459ca939db8fef" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Near LHC bus stop</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:52 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902152327675.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_f51a0eea8e766187cc80e7d302d040ee.setContent(html_68fc79025c7cf6d3fa459ca939db8fef);
+            
+        
+
+        marker_4c941d226b73a997cfd4356595defe3f.bindPopup(popup_f51a0eea8e766187cc80e7d302d040ee)
+        ;
+
+        
+    
+    
+            marker_4c941d226b73a997cfd4356595defe3f.bindTooltip(
+                `<div>
+                     Near LHC bus stop | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c941d226b73a997cfd4356595defe3f.setIcon(icon_52c2ab35b955aa24e3c87f3ffc8cf8bd);
+            
+    
+            var marker_7337c867083f600f5ce718f7b2e16948 = L.marker(
+                [13.71430683, 79.5901248],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_fb2266a3e93c110bedd0a34fd134172e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd5a05e4fc0d9d4083a2c32df0e89c60 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b0ab79488fcdf899ba771ab55a8e1a22 = $(`<div id="html_b0ab79488fcdf899ba771ab55a8e1a22" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">LHC bus stop</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:54 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902152444227.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_cd5a05e4fc0d9d4083a2c32df0e89c60.setContent(html_b0ab79488fcdf899ba771ab55a8e1a22);
+            
+        
+
+        marker_7337c867083f600f5ce718f7b2e16948.bindPopup(popup_cd5a05e4fc0d9d4083a2c32df0e89c60)
+        ;
+
+        
+    
+    
+            marker_7337c867083f600f5ce718f7b2e16948.bindTooltip(
+                `<div>
+                     LHC bus stop | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7337c867083f600f5ce718f7b2e16948.setIcon(icon_fb2266a3e93c110bedd0a34fd134172e);
+            
+    
+            var marker_f58ca5ca9465aa739169946d88e368df = L.marker(
+                [13.714977349999996, 79.59103217],
+                {
+}
+            ).addTo(marker_cluster_75afdf52980952ccb6835a985c0789b5);
+        
+    
+            var icon_abed40b561a9e559e28492044136ac02 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_beb8b7db24a222469dfb1db33e8ec741 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9034af38f14764ae9d5f1ecade51d6bb = $(`<div id="html_9034af38f14764ae9d5f1ecade51d6bb" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Outside LHC</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 02 Sep 2026, 20:58 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260902152807893.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_beb8b7db24a222469dfb1db33e8ec741.setContent(html_9034af38f14764ae9d5f1ecade51d6bb);
+            
+        
+
+        marker_f58ca5ca9465aa739169946d88e368df.bindPopup(popup_beb8b7db24a222469dfb1db33e8ec741)
+        ;
+
+        
+    
+    
+            marker_f58ca5ca9465aa739169946d88e368df.bindTooltip(
+                `<div>
+                     Outside LHC | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f58ca5ca9465aa739169946d88e368df.setIcon(icon_abed40b561a9e559e28492044136ac02);
+            
+    
+            marker_cluster_75afdf52980952ccb6835a985c0789b5.addTo(feature_group_ed1af6a4e595db6873e89d5f060d01d8);
+        
+    
+            feature_group_ed1af6a4e595db6873e89d5f060d01d8.addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            var feature_group_7c53ee87308854c0ea48a858848c1837 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_ab5f13b53058b2af80a66e75257d5d56 = L.markerClusterGroup(
+                {
+  "disableClusteringAtZoom": 18,
+}
+            );
+        
+    
+            var marker_ef0a533f163a042029a5d08e6780cee7 = L.marker(
+                [13.70719971, 79.59470848],
+                {
+}
+            ).addTo(marker_cluster_ab5f13b53058b2af80a66e75257d5d56);
+        
+    
+            var icon_b99b54e27e620605af1a4892ba41acf6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99317e52b28f2fe4a6d14634517fa188 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a859b5b0986c670f3d370a8e27aba235 = $(`<div id="html_a859b5b0986c670f3d370a8e27aba235" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Health center</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 04 Sep 2026, 13:10 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260904074058421.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_99317e52b28f2fe4a6d14634517fa188.setContent(html_a859b5b0986c670f3d370a8e27aba235);
+            
+        
+
+        marker_ef0a533f163a042029a5d08e6780cee7.bindPopup(popup_99317e52b28f2fe4a6d14634517fa188)
+        ;
+
+        
+    
+    
+            marker_ef0a533f163a042029a5d08e6780cee7.bindTooltip(
+                `<div>
+                     Health center | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef0a533f163a042029a5d08e6780cee7.setIcon(icon_b99b54e27e620605af1a4892ba41acf6);
+            
+    
+            var marker_16f448357f86f913f1a4bed97e54e367 = L.marker(
+                [13.706655279999998, 79.59449264],
+                {
+}
+            ).addTo(marker_cluster_ab5f13b53058b2af80a66e75257d5d56);
+        
+    
+            var icon_79c0e8d3e0157a5be3ae75eab5052a3e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0357b69a43a0c22881bdcefe2af920f1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2279e7860d307e8ac963b76651c4cf8c = $(`<div id="html_2279e7860d307e8ac963b76651c4cf8c" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Near old library</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 04 Sep 2026, 13:12 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260904074243690.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_0357b69a43a0c22881bdcefe2af920f1.setContent(html_2279e7860d307e8ac963b76651c4cf8c);
+            
+        
+
+        marker_16f448357f86f913f1a4bed97e54e367.bindPopup(popup_0357b69a43a0c22881bdcefe2af920f1)
+        ;
+
+        
+    
+    
+            marker_16f448357f86f913f1a4bed97e54e367.bindTooltip(
+                `<div>
+                     Near old library | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16f448357f86f913f1a4bed97e54e367.setIcon(icon_79c0e8d3e0157a5be3ae75eab5052a3e);
+            
+    
+            marker_cluster_ab5f13b53058b2af80a66e75257d5d56.addTo(feature_group_7c53ee87308854c0ea48a858848c1837);
+        
+    
+            feature_group_7c53ee87308854c0ea48a858848c1837.addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            var feature_group_da17ace3c244e50e1078e97afd572c2b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_84fa4a439d6e85f1063a25002d9c8a88 = L.markerClusterGroup(
+                {
+  "disableClusteringAtZoom": 18,
+}
+            );
+        
+    
+            var marker_d189480399643255939fdf86fc5d3cf9 = L.marker(
+                [13.712831560000001, 79.59169805],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_b553ed482668602f5fd47eb91274934d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_758c3b751de4775c10095998854afcc3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9a23462f0e4ea1d4d0110ffdd06c01a1 = $(`<div id="html_9a23462f0e4ea1d4d0110ffdd06c01a1" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">bin 1 near director circle</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 16:52 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906112253287.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_758c3b751de4775c10095998854afcc3.setContent(html_9a23462f0e4ea1d4d0110ffdd06c01a1);
+            
+        
+
+        marker_d189480399643255939fdf86fc5d3cf9.bindPopup(popup_758c3b751de4775c10095998854afcc3)
+        ;
+
+        
+    
+    
+            marker_d189480399643255939fdf86fc5d3cf9.bindTooltip(
+                `<div>
+                     bin 1 near director circle | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d189480399643255939fdf86fc5d3cf9.setIcon(icon_b553ed482668602f5fd47eb91274934d);
+            
+    
+            var marker_2b1ba2a520e0ce35e2a173fd6b82f86a = L.marker(
+                [13.711985109999999, 79.59159744999998],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_0ccc9228331d516fd0c39baf86b06ea4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6d34a2a0118e2c6e973cf2b31c429e8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0a73818c8e91877db015e7ffe2063ed3 = $(`<div id="html_0a73818c8e91877db015e7ffe2063ed3" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin3 director circle</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 16:54 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906112434288.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_d6d34a2a0118e2c6e973cf2b31c429e8.setContent(html_0a73818c8e91877db015e7ffe2063ed3);
+            
+        
+
+        marker_2b1ba2a520e0ce35e2a173fd6b82f86a.bindPopup(popup_d6d34a2a0118e2c6e973cf2b31c429e8)
+        ;
+
+        
+    
+    
+            marker_2b1ba2a520e0ce35e2a173fd6b82f86a.bindTooltip(
+                `<div>
+                     Bin3 director circle | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b1ba2a520e0ce35e2a173fd6b82f86a.setIcon(icon_0ccc9228331d516fd0c39baf86b06ea4);
+            
+    
+            var marker_162e22337e6a1c0f6ab7803cf6177f9f = L.marker(
+                [13.71214995, 79.59238389],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_b15959aed355717394723c7e1488c911 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe41c7906fe1418bb2c558bd92357957 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1ed0cff0458e29a65ff4b18f19b8fc8e = $(`<div id="html_1ed0cff0458e29a65ff4b18f19b8fc8e" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin2 director circle</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 16:55 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906112601031.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_fe41c7906fe1418bb2c558bd92357957.setContent(html_1ed0cff0458e29a65ff4b18f19b8fc8e);
+            
+        
+
+        marker_162e22337e6a1c0f6ab7803cf6177f9f.bindPopup(popup_fe41c7906fe1418bb2c558bd92357957)
+        ;
+
+        
+    
+    
+            marker_162e22337e6a1c0f6ab7803cf6177f9f.bindTooltip(
+                `<div>
+                     Bin2 director circle | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_162e22337e6a1c0f6ab7803cf6177f9f.setIcon(icon_b15959aed355717394723c7e1488c911);
+            
+    
+            var marker_7a0d40f6b45ec1f341aeedc782a5fa3b = L.marker(
+                [13.711081960000001, 79.59231634],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_7eb0d83165e461295562d6834d44d540 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6ed8b882c6cf4823b86a574a771e1264 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fbd3dbc09705641c67c5b8792f2c7704 = $(`<div id="html_fbd3dbc09705641c67c5b8792f2c7704" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin4 road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 16:57 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906112748233.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_6ed8b882c6cf4823b86a574a771e1264.setContent(html_fbd3dbc09705641c67c5b8792f2c7704);
+            
+        
+
+        marker_7a0d40f6b45ec1f341aeedc782a5fa3b.bindPopup(popup_6ed8b882c6cf4823b86a574a771e1264)
+        ;
+
+        
+    
+    
+            marker_7a0d40f6b45ec1f341aeedc782a5fa3b.bindTooltip(
+                `<div>
+                     Bin4 road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a0d40f6b45ec1f341aeedc782a5fa3b.setIcon(icon_7eb0d83165e461295562d6834d44d540);
+            
+    
+            var marker_721050b0cbd3cf2b515aa4039429eb6f = L.marker(
+                [13.709830599999998, 79.59234922],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_05eabf74a403ab21aec2b49b62bedd5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e79b56c0b5d09ccc185c4bc7a4e6891a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d2b0f43919faf882fd4f33483830db97 = $(`<div id="html_d2b0f43919faf882fd4f33483830db97" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin5 road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 16:59 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906112940803.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_e79b56c0b5d09ccc185c4bc7a4e6891a.setContent(html_d2b0f43919faf882fd4f33483830db97);
+            
+        
+
+        marker_721050b0cbd3cf2b515aa4039429eb6f.bindPopup(popup_e79b56c0b5d09ccc185c4bc7a4e6891a)
+        ;
+
+        
+    
+    
+            marker_721050b0cbd3cf2b515aa4039429eb6f.bindTooltip(
+                `<div>
+                     Bin5 road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_721050b0cbd3cf2b515aa4039429eb6f.setIcon(icon_05eabf74a403ab21aec2b49b62bedd5e);
+            
+    
+            var marker_88cee1fd656d4782538ed9bdfd4e339f = L.marker(
+                [13.70833538, 79.59267413999999],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_963209dffc4411251e6505a826b7e8a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57b939941c41d1be192d3c12eae8f408 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4992b411e34271aa39f63e084cee9e61 = $(`<div id="html_4992b411e34271aa39f63e084cee9e61" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Untitled bin</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:01 IST<br>           <div style="margin-top: 8px; text-align: center;"><i>No photo attached</i></div>         </div></div>`)[0];
+                popup_57b939941c41d1be192d3c12eae8f408.setContent(html_4992b411e34271aa39f63e084cee9e61);
+            
+        
+
+        marker_88cee1fd656d4782538ed9bdfd4e339f.bindPopup(popup_57b939941c41d1be192d3c12eae8f408)
+        ;
+
+        
+    
+    
+            marker_88cee1fd656d4782538ed9bdfd4e339f.bindTooltip(
+                `<div>
+                     Untitled bin | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88cee1fd656d4782538ed9bdfd4e339f.setIcon(icon_963209dffc4411251e6505a826b7e8a7);
+            
+    
+            var marker_7bd640149feff1cce2d752ce2149f43d = L.marker(
+                [13.708319849999999, 79.59266649999998],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_0393fc3c3eb139a26a315e7407a54e1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa05e4bee6b5b05d08721fb310872209 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6e630eca48da14096b39248f9f6d5c11 = $(`<div id="html_6e630eca48da14096b39248f9f6d5c11" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin6 road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:01 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906113200094.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_fa05e4bee6b5b05d08721fb310872209.setContent(html_6e630eca48da14096b39248f9f6d5c11);
+            
+        
+
+        marker_7bd640149feff1cce2d752ce2149f43d.bindPopup(popup_fa05e4bee6b5b05d08721fb310872209)
+        ;
+
+        
+    
+    
+            marker_7bd640149feff1cce2d752ce2149f43d.bindTooltip(
+                `<div>
+                     Bin6 road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7bd640149feff1cce2d752ce2149f43d.setIcon(icon_0393fc3c3eb139a26a315e7407a54e1d);
+            
+    
+            var marker_0233e4ecf434474504a9681755ed5278 = L.marker(
+                [13.707423170000002, 79.59290057],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_4f0d51cc5b535788cc18337b51aa4e72 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_400be37c9844548d1c39b628742d51b6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d7a6345cb6ad3c0da56f89f43b7f0f03 = $(`<div id="html_d7a6345cb6ad3c0da56f89f43b7f0f03" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin7 road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:03 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906113340676.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_400be37c9844548d1c39b628742d51b6.setContent(html_d7a6345cb6ad3c0da56f89f43b7f0f03);
+            
+        
+
+        marker_0233e4ecf434474504a9681755ed5278.bindPopup(popup_400be37c9844548d1c39b628742d51b6)
+        ;
+
+        
+    
+    
+            marker_0233e4ecf434474504a9681755ed5278.bindTooltip(
+                `<div>
+                     Bin7 road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0233e4ecf434474504a9681755ed5278.setIcon(icon_4f0d51cc5b535788cc18337b51aa4e72);
+            
+    
+            var marker_6c1cc89214bcc063a189d391bbe47a2b = L.marker(
+                [13.707425889999996, 79.59293083],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_444f02e1c853b908b3676b11ed4bac77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72f14d534467102cffb30e601c733ac5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_998c848d1a44d9decdccb8573bc5de59 = $(`<div id="html_998c848d1a44d9decdccb8573bc5de59" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin8 road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:03 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906113403139.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_72f14d534467102cffb30e601c733ac5.setContent(html_998c848d1a44d9decdccb8573bc5de59);
+            
+        
+
+        marker_6c1cc89214bcc063a189d391bbe47a2b.bindPopup(popup_72f14d534467102cffb30e601c733ac5)
+        ;
+
+        
+    
+    
+            marker_6c1cc89214bcc063a189d391bbe47a2b.bindTooltip(
+                `<div>
+                     Bin8 road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c1cc89214bcc063a189d391bbe47a2b.setIcon(icon_444f02e1c853b908b3676b11ed4bac77);
+            
+    
+            var marker_6c2deda9ec352e2520e359856dfff71f = L.marker(
+                [13.707357019999998, 79.59291492],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_035756a33c7aec92e2034d8437f81686 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_582fe462e97bfd324a9790b10f7d6e0e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bdc3c0cb8504978b6fa149fee45f14a9 = $(`<div id="html_bdc3c0cb8504978b6fa149fee45f14a9" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Untitled bin</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:04 IST<br>           <div style="margin-top: 8px; text-align: center;"><i>No photo attached</i></div>         </div></div>`)[0];
+                popup_582fe462e97bfd324a9790b10f7d6e0e.setContent(html_bdc3c0cb8504978b6fa149fee45f14a9);
+            
+        
+
+        marker_6c2deda9ec352e2520e359856dfff71f.bindPopup(popup_582fe462e97bfd324a9790b10f7d6e0e)
+        ;
+
+        
+    
+    
+            marker_6c2deda9ec352e2520e359856dfff71f.bindTooltip(
+                `<div>
+                     Untitled bin | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c2deda9ec352e2520e359856dfff71f.setIcon(icon_035756a33c7aec92e2034d8437f81686);
+            
+    
+            var marker_6e379da88e36aff005ed566a6dc119bb = L.marker(
+                [13.707357019999998, 79.59291492],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_2f0e36010c3479d13b99618e7146e2dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e5d153d59d31afd14107c6a6ee736ed = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_65b5565a19b86a4a5a677d123bb79cef = $(`<div id="html_65b5565a19b86a4a5a677d123bb79cef" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin9 road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:04 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906113441685.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_7e5d153d59d31afd14107c6a6ee736ed.setContent(html_65b5565a19b86a4a5a677d123bb79cef);
+            
+        
+
+        marker_6e379da88e36aff005ed566a6dc119bb.bindPopup(popup_7e5d153d59d31afd14107c6a6ee736ed)
+        ;
+
+        
+    
+    
+            marker_6e379da88e36aff005ed566a6dc119bb.bindTooltip(
+                `<div>
+                     Bin9 road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6e379da88e36aff005ed566a6dc119bb.setIcon(icon_2f0e36010c3479d13b99618e7146e2dc);
+            
+    
+            var marker_0cdd36d9708718671f5b53dc6f2e74b7 = L.marker(
+                [13.70734612, 79.59294972],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_e12352dd452e7ed67e38eda596c06c63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b64570a649e8ba46c540a1ad7afe5a91 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2e8a71e7868cd9ff82c609ecd41e9865 = $(`<div id="html_2e8a71e7868cd9ff82c609ecd41e9865" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin10 road near south gate</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:04 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906113459543.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_b64570a649e8ba46c540a1ad7afe5a91.setContent(html_2e8a71e7868cd9ff82c609ecd41e9865);
+            
+        
+
+        marker_0cdd36d9708718671f5b53dc6f2e74b7.bindPopup(popup_b64570a649e8ba46c540a1ad7afe5a91)
+        ;
+
+        
+    
+    
+            marker_0cdd36d9708718671f5b53dc6f2e74b7.bindTooltip(
+                `<div>
+                     Bin10 road near south gate | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0cdd36d9708718671f5b53dc6f2e74b7.setIcon(icon_e12352dd452e7ed67e38eda596c06c63);
+            
+    
+            var marker_1a4d492922ee255e74e7127b1edd5456 = L.marker(
+                [13.7071721, 79.59280137999998],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_8732c4fe765096b846d31c4f4fd6edbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5cb22565d02fc2c22227dff71f278cb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1ebd5181adf64999395642ea342bdf89 = $(`<div id="html_1ebd5181adf64999395642ea342bdf89" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Untitled bin</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:05 IST<br>           <div style="margin-top: 8px; text-align: center;"><i>No photo attached</i></div>         </div></div>`)[0];
+                popup_c5cb22565d02fc2c22227dff71f278cb.setContent(html_1ebd5181adf64999395642ea342bdf89);
+            
+        
+
+        marker_1a4d492922ee255e74e7127b1edd5456.bindPopup(popup_c5cb22565d02fc2c22227dff71f278cb)
+        ;
+
+        
+    
+    
+            marker_1a4d492922ee255e74e7127b1edd5456.bindTooltip(
+                `<div>
+                     Untitled bin | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a4d492922ee255e74e7127b1edd5456.setIcon(icon_8732c4fe765096b846d31c4f4fd6edbf);
+            
+    
+            var marker_4a876fa81bd988cfd261a4b939c67302 = L.marker(
+                [13.70716627, 79.59279189],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_a20ea84dddd93b13886685d1acb2cbc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0e198ba2caa2995d0f7f7af75a0dca1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a81048b5224d19b042436a5b1f19c50a = $(`<div id="html_a81048b5224d19b042436a5b1f19c50a" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Bin11 road</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:06 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906113627643.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_e0e198ba2caa2995d0f7f7af75a0dca1.setContent(html_a81048b5224d19b042436a5b1f19c50a);
+            
+        
+
+        marker_4a876fa81bd988cfd261a4b939c67302.bindPopup(popup_e0e198ba2caa2995d0f7f7af75a0dca1)
+        ;
+
+        
+    
+    
+            marker_4a876fa81bd988cfd261a4b939c67302.bindTooltip(
+                `<div>
+                     Bin11 road | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a876fa81bd988cfd261a4b939c67302.setIcon(icon_a20ea84dddd93b13886685d1acb2cbc4);
+            
+    
+            var marker_ec1185bb97889759528af27cd8167c55 = L.marker(
+                [13.70607357, 79.59445192],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_ca0802d8e928055d4b2dc3c0df98ef02 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f06655b87b84d5a8e68a151011f20228 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_de4ada12be115a87866ecf6f20e70a73 = $(`<div id="html_de4ada12be115a87866ecf6f20e70a73" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Near south gate</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:10 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906114007081.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_f06655b87b84d5a8e68a151011f20228.setContent(html_de4ada12be115a87866ecf6f20e70a73);
+            
+        
+
+        marker_ec1185bb97889759528af27cd8167c55.bindPopup(popup_f06655b87b84d5a8e68a151011f20228)
+        ;
+
+        
+    
+    
+            marker_ec1185bb97889759528af27cd8167c55.bindTooltip(
+                `<div>
+                     Near south gate | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec1185bb97889759528af27cd8167c55.setIcon(icon_ca0802d8e928055d4b2dc3c0df98ef02);
+            
+    
+            var marker_248a8aabc3e364d896fc2df5e214a571 = L.marker(
+                [13.705630619999997, 79.59435674],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_5f4aa4b16e2b7bc55ad5b77fe83a084f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8d9520921903ecdece1c75e3483def7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c0ad5f5a7021846f3390f54fa1d25e99 = $(`<div id="html_c0ad5f5a7021846f3390f54fa1d25e99" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Abuz</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:11 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906114111564.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_d8d9520921903ecdece1c75e3483def7.setContent(html_c0ad5f5a7021846f3390f54fa1d25e99);
+            
+        
+
+        marker_248a8aabc3e364d896fc2df5e214a571.bindPopup(popup_d8d9520921903ecdece1c75e3483def7)
+        ;
+
+        
+    
+    
+            marker_248a8aabc3e364d896fc2df5e214a571.bindTooltip(
+                `<div>
+                     Abuz | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_248a8aabc3e364d896fc2df5e214a571.setIcon(icon_5f4aa4b16e2b7bc55ad5b77fe83a084f);
+            
+    
+            var marker_44d48e902cbd7d095c98fad5cce61094 = L.marker(
+                [13.707098909999997, 79.59444054999999],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_adb6dfc22d047fbdc412adf78acc11de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9993d3c620def12ebf3db569eb7331e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a7e1d3fedce0ce22d93dc3595985cdfa = $(`<div id="html_a7e1d3fedce0ce22d93dc3595985cdfa" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Outside south mess</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:13 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906114350126.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_d9993d3c620def12ebf3db569eb7331e.setContent(html_a7e1d3fedce0ce22d93dc3595985cdfa);
+            
+        
+
+        marker_44d48e902cbd7d095c98fad5cce61094.bindPopup(popup_d9993d3c620def12ebf3db569eb7331e)
+        ;
+
+        
+    
+    
+            marker_44d48e902cbd7d095c98fad5cce61094.bindTooltip(
+                `<div>
+                     Outside south mess | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44d48e902cbd7d095c98fad5cce61094.setIcon(icon_adb6dfc22d047fbdc412adf78acc11de);
+            
+    
+            var marker_31f477ce85a6bce64c4efbaeeeb05361 = L.marker(
+                [13.707578309999993, 79.59440334],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_5fd738511af7dfff88950e0d07d81b85 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3961f346e2f5eb46954fc85f3d395a43 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4db6496a0a2eef680ae655f1a35a28fa = $(`<div id="html_4db6496a0a2eef680ae655f1a35a28fa" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Sahana hostel</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:14 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906114455875.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_3961f346e2f5eb46954fc85f3d395a43.setContent(html_4db6496a0a2eef680ae655f1a35a28fa);
+            
+        
+
+        marker_31f477ce85a6bce64c4efbaeeeb05361.bindPopup(popup_3961f346e2f5eb46954fc85f3d395a43)
+        ;
+
+        
+    
+    
+            marker_31f477ce85a6bce64c4efbaeeeb05361.bindTooltip(
+                `<div>
+                     Sahana hostel | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31f477ce85a6bce64c4efbaeeeb05361.setIcon(icon_5fd738511af7dfff88950e0d07d81b85);
+            
+    
+            var marker_cfbc401696ec1901f2c693ee9983e2f6 = L.marker(
+                [13.70809528, 79.59484223],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_9dcbbcf23051b45e13a8ffde65155817 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9cf15d6cdf1438d0a1eb07b48609574 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fe6bb217697e87f6ac526c0a4a3edc3b = $(`<div id="html_fe6bb217697e87f6ac526c0a4a3edc3b" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">South canteen</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:16 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906114621698.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_e9cf15d6cdf1438d0a1eb07b48609574.setContent(html_fe6bb217697e87f6ac526c0a4a3edc3b);
+            
+        
+
+        marker_cfbc401696ec1901f2c693ee9983e2f6.bindPopup(popup_e9cf15d6cdf1438d0a1eb07b48609574)
+        ;
+
+        
+    
+    
+            marker_cfbc401696ec1901f2c693ee9983e2f6.bindTooltip(
+                `<div>
+                     South canteen | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cfbc401696ec1901f2c693ee9983e2f6.setIcon(icon_9dcbbcf23051b45e13a8ffde65155817);
+            
+    
+            var marker_08144d44a2134855ba5f9ae53c187c7a = L.marker(
+                [13.70816822, 79.594832],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_9651fedf286a4141e1d462157ec8a8af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7424d808135ae258f59e6b97cd756985 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2987e17873e983c3b64e6cbdd835b8eb = $(`<div id="html_2987e17873e983c3b64e6cbdd835b8eb" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">South canteen2</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:16 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906114651364.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_7424d808135ae258f59e6b97cd756985.setContent(html_2987e17873e983c3b64e6cbdd835b8eb);
+            
+        
+
+        marker_08144d44a2134855ba5f9ae53c187c7a.bindPopup(popup_7424d808135ae258f59e6b97cd756985)
+        ;
+
+        
+    
+    
+            marker_08144d44a2134855ba5f9ae53c187c7a.bindTooltip(
+                `<div>
+                     South canteen2 | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08144d44a2134855ba5f9ae53c187c7a.setIcon(icon_9651fedf286a4141e1d462157ec8a8af);
+            
+    
+            var marker_44cd3c968cef2cacf0d20d9579f2783d = L.marker(
+                [13.708837109999996, 79.59394653999999],
+                {
+}
+            ).addTo(marker_cluster_84fa4a439d6e85f1063a25002d9c8a88);
+        
+    
+            var icon_ead76f8dd790bb2e2ad80b87dd023c1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a55dea1af923a71e6abfdd91bf645e3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0746b2a9d301997435b23d05c5622640 = $(`<div id="html_0746b2a9d301997435b23d05c5622640" style="width: 100.0%; height: 100.0%;">         <div style="font-family:Arial;font-size:13px;width:280px">           <h4 style="margin:0 0 6px 0; color:#2c3e50;">Sports ground</h4>           <b>Collected by:</b> Shubhranshu<br>           <b>Field note:</b> No field note recorded<br>           <b>Recorded:</b> 06 Sep 2026, 17:20 IST<br>           <div style="margin-top: 8px; text-align: center;"><img src="JPEG_20260906115039536.jpg" style="max-width:260px; border-radius:4px; margin-top:5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>         </div></div>`)[0];
+                popup_0a55dea1af923a71e6abfdd91bf645e3.setContent(html_0746b2a9d301997435b23d05c5622640);
+            
+        
+
+        marker_44cd3c968cef2cacf0d20d9579f2783d.bindPopup(popup_0a55dea1af923a71e6abfdd91bf645e3)
+        ;
+
+        
+    
+    
+            marker_44cd3c968cef2cacf0d20d9579f2783d.bindTooltip(
+                `<div>
+                     Sports ground | Shubhranshu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44cd3c968cef2cacf0d20d9579f2783d.setIcon(icon_ead76f8dd790bb2e2ad80b87dd023c1c);
+            
+    
+            marker_cluster_84fa4a439d6e85f1063a25002d9c8a88.addTo(feature_group_da17ace3c244e50e1078e97afd572c2b);
+        
+    
+            feature_group_da17ace3c244e50e1078e97afd572c2b.addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_d8c7c02995bc41524648d76a68499c40);
+        
+    
+            var measure_control_7288af2a3068441b312e052013ab293f = new L.Control.Measure(
+                {
+  "position": "topright",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "miles",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+});
+            map_d8c7c02995bc41524648d76a68499c40.addControl(measure_control_7288af2a3068441b312e052013ab293f);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var layer_control_bb91e8450a053d2c33d4448725aa5604_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_ac1c831d8692ea8b2a91527cae277200,
+                    "OpenStreetMap" : tile_layer_83d60f8b261fa5c0c7c5e362a8c5bac9,
+                    "Satellite (Esri)" : tile_layer_c85ee6ead980393f483ed261f8034eb8,
+                },
+                overlays :  {
+                    "Waste bins - survey 01 Sep 2026 (2)" : feature_group_9ae7db3d155702daef5a06bc4df63ea1,
+                    "Waste bins - survey 02 Sep 2026 (11)" : feature_group_ed1af6a4e595db6873e89d5f060d01d8,
+                    "Waste bins - survey 04 Sep 2026 (2)" : feature_group_7c53ee87308854c0ea48a858848c1837,
+                    "Waste bins - survey 06 Sep 2026 (21)" : feature_group_da17ace3c244e50e1078e97afd572c2b,
+                },
+            };
+            let layer_control_bb91e8450a053d2c33d4448725aa5604 = L.control.layers(
+                layer_control_bb91e8450a053d2c33d4448725aa5604_layers.base_layers,
+                layer_control_bb91e8450a053d2c33d4448725aa5604_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_d8c7c02995bc41524648d76a68499c40);
+
+        
+</script>
+</html>
